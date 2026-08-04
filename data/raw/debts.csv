@@ -1,0 +1,6 @@
+"debt_id","client_id","debt_type","lender","balance","apr","minimum_payment","remaining_payments"
+"D001","C001","credit_card","Chase","8400","0.2499","252",""
+"D002","C001","credit_card","Capital One","3200","0.2049","96",""
+"D003","C001","auto_loan","Desert Auto Finance","22600","0.0675","552","47"
+"D004","C001","student_loan","Federal Student Aid - Alex","31500","0.052","338","118"
+"D005","C001","student_loan","Federal Student Aid - Jordan","18000","0.044","205","103"

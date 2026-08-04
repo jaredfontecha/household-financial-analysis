@@ -1,0 +1,8 @@
+"file","field","definition"
+"transactions_raw.csv","transaction_id","Source-system transaction identifier; duplicates may have different IDs."
+"transactions_raw.csv","account_id","Links to accounts.csv."
+"transactions_raw.csv","transaction_date","Transaction date with intentionally inconsistent formats."
+"transactions_raw.csv","posted_date","Date the transaction posted."
+"transactions_raw.csv","description","Raw merchant/bank description; intentionally inconsistent."
+"transactions_raw.csv","amount","Positive = inflow/credit; negative = outflow/debit."
+"transactions_raw.csv","client_reported_category","Incomplete and sometimes inaccurate client labels."

@@ -1,0 +1,6 @@
+"account_id","client_id","account_name","account_type","institution","last_four","opening_balance"
+"A001","C001","Joint Checking","checking","Silver State Bank","1842","14800"
+"A002","C001","Household Checking","checking","Desert Federal CU","7701","4200"
+"A003","C001","Alex Rewards","credit_card","Chase","4432","-8400"
+"A004","C001","Jordan Cash Card","credit_card","Capital One","9914","-3200"
+"A005","C001","Travel Card","credit_card","Amex","6120","-1850"
