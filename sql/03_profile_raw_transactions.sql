@@ -63,3 +63,19 @@ SELECT
 FROM raw.transactions
 GROUP BY date_format
 ORDER BY row_count DESC;
+
+-- Identify the different amount formats
+SELECT
+    CASE
+        WHEN TRIM(amount) ~ '^-?[0-9]+(\.[0-9]{1,2})?$'
+            THEN 'Plain number'
+        WHEN TRIM(amount) ~ '^\$-?[0-9,]+(\.[0-9]{1,2})?$'
+            THEN 'Dollar sign or commas'
+        WHEN TRIM(amount) ~ '^\([0-9,]+(\.[0-9]{1,2})?\)$'
+            THEN 'Parentheses'
+        ELSE 'Other'
+    END AS amount_format,
+    COUNT(*) AS row_count
+FROM raw.transactions
+GROUP BY amount_format
+ORDER BY row_count DESC;
