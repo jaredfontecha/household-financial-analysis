@@ -44,7 +44,6 @@ This project analyzes a household's 2025 transactions, accounts, and debt to eva
 - `dashboard/charts/` — generated financial charts
 - `excel/` — Excel dashboard workbook
 - `presentation/` — final PowerPoint presentation
-- `reports/` — project reporting files
 
 ## How to Run the Project
 

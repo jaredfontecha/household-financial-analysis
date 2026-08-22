@@ -26,6 +26,22 @@ UPDATE clean.transactions
 SET transaction_type = 'refund'
 WHERE UPPER(description_raw) LIKE '%TARGET RETURN%';
 
+-- Verify Target returns are now classified as refunds
+SELECT
+    description_raw,
+    transaction_type,
+    amount
+FROM clean.transactions
+WHERE UPPER(description_raw) LIKE '%TARGET RETURN%'
+  AND duplicate_rank = 1;
+
+-- Recalculate annual expenses after refund fix
+SELECT
+    ABS(SUM(amount)) AS annual_spending
+FROM clean.transactions
+WHERE duplicate_rank = 1
+  AND transaction_type = 'expense';
+
 -- Categorize everything else unassigned
 UPDATE clean.transactions
 SET transaction_type = 'expense'
