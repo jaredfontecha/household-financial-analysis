@@ -19,7 +19,12 @@ WHERE UPPER(description_raw) like '%TRANSFER TO CAPITAL ONE%'
 -- Categorize refunds
 UPDATE clean.transactions
 SET transaction_type = 'refund'
-WHERE UPPER(description_raw) LIKE '%REFUND%';
+WHERE UPPER(description_raw) LIKE '%REFUND%'
+
+-- Categorize Target returns as refunds
+UPDATE clean.transactions
+SET transaction_type = 'refund'
+WHERE UPPER(description_raw) LIKE '%TARGET RETURN%';
 
 -- Categorize everything else unassigned
 UPDATE clean.transactions
